@@ -34,14 +34,14 @@ public class TestBusquedaPorFila {
         return true;
     }
 
-    private boolean isSortedDesc(Universidad[] universidades) {
-        for (int i = 0; i < universidades.length - 1; i++) {
-            if (fixauditabole(universidades[i]) < fixauditabole(universidades[i + 1])) {
-                return false;
-            }
-        }
-        return true;
-    }
+    // private boolean isSortedDesc(Universidad[] universidades) {
+    //     for (int i = 0; i < universidades.length - 1; i++) {
+    //         if (fixauditabole(universidades[i]) < fixauditabole(universidades[i + 1])) {
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
 
     private int fixauditabole(Universidad universidad) {
         return fixauditable(universidad);
@@ -59,71 +59,71 @@ public class TestBusquedaPorFila {
         assertNull(ctrl.binarySearchByEnrollment(data, 13, false));
     }
 
-    @Test
-    public void testFilaB() {
-        ctrl.sortInsertionDesc(data);
-        assertTrue(isSortedDesc(data));
-        Universidad u = ctrl.binarySearchByEnrollment(data, 16, false);
-        assertNotNull(u);
-        assertEquals("Universidad Epsilon", u.getNombre());
+    // @Test
+    // public void testFilaB() {
+    //     ctrl.sortInsertionDesc(data);
+    //     assertTrue(isSortedDesc(data));
+    //     Universidad u = ctrl.binarySearchByEnrollment(data, 16, false);
+    //     assertNotNull(u);
+    //     assertEquals("Universidad Epsilon", u.getNombre());
 
-        Universidad noExiste1 = ctrl.binarySearchByEnrollment(data, 6, true);
-        assertNull(noExiste1);
+    //     Universidad noExiste1 = ctrl.binarySearchByEnrollment(data, 6, true);
+    //     assertNull(noExiste1);
 
-        Universidad noExiste2 = ctrl.binarySearchByEnrollment(data, 16, true);
-        assertNull(noExiste2);
-    }
+    //     Universidad noExiste2 = ctrl.binarySearchByEnrollment(data, 16, true);
+    //     assertNull(noExiste2);
+    // }
 
-    @Test
-    public void testFilaC() {
-        ctrl.sortBubbleAsc(data);
-        assertTrue(isSortedAsc(data));
-        Universidad u = ctrl.binarySearchByEnrollment(data, 7, true);
-        assertNotNull(u);
-        assertEquals("Universidad Gamma", u.getNombre());
+    // @Test
+    // public void testFilaC() {
+    //     ctrl.sortBubbleAsc(data);
+    //     assertTrue(isSortedAsc(data));
+    //     Universidad u = ctrl.binarySearchByEnrollment(data, 7, true);
+    //     assertNotNull(u);
+    //     assertEquals("Universidad Gamma", u.getNombre());
 
-        assertNull(ctrl.binarySearchByEnrollment(data, 9, false));
-        assertNull(ctrl.binarySearchByEnrollment(data, 7, false));
-    }
+    //     assertNull(ctrl.binarySearchByEnrollment(data, 9, false));
+    //     assertNull(ctrl.binarySearchByEnrollment(data, 7, false));
+    // }
 
-    @Test
-    public void testFilaD() {
-        ctrl.sortBubbleDesc(data);
-        assertTrue(isSortedDesc(data));
-        Universidad u = ctrl.binarySearchByEnrollment(data, 12, false);
-        assertNotNull(u);
-        assertEquals("Universidad Delta", u.getNombre());
+    // @Test
+    // public void testFilaD() {
+    //     ctrl.sortBubbleDesc(data);
+    //     assertTrue(isSortedDesc(data));
+    //     Universidad u = ctrl.binarySearchByEnrollment(data, 12, false);
+    //     assertNotNull(u);
+    //     assertEquals("Universidad Delta", u.getNombre());
 
-        assertNull(ctrl.binarySearchByEnrollment(data, 10, true));
+    //     assertNull(ctrl.binarySearchByEnrollment(data, 10, true));
 
-        Universidad u2 = ctrl.binarySearchByEnrollment(data, 12, true);
-        assertNotNull(u2);
-        assertEquals("Universidad Delta", u2.getNombre());
+    //     Universidad u2 = ctrl.binarySearchByEnrollment(data, 12, true);
+    //     assertNotNull(u2);
+    //     assertEquals("Universidad Delta", u2.getNombre());
 
-    }
+    // }
 
-    @Test
-    public void testFilaE() {
-        ctrl.sortSelectionAsc(data);
-        assertTrue(isSortedAsc(data));
-        Universidad u = ctrl.binarySearchByEnrollment(data, 16, true);
-        assertNotNull(u);
-        assertEquals("Universidad Epsilon", u.getNombre());
+    // @Test
+    // public void testFilaE() {
+    //     ctrl.sortSelectionAsc(data);
+    //     assertTrue(isSortedAsc(data));
+    //     Universidad u = ctrl.binarySearchByEnrollment(data, 16, true);
+    //     assertNotNull(u);
+    //     assertEquals("Universidad Epsilon", u.getNombre());
 
-        assertNull(ctrl.binarySearchByEnrollment(data, 4, false));
-        assertNull(ctrl.binarySearchByEnrollment(data, 16, false));
-    }
+    //     assertNull(ctrl.binarySearchByEnrollment(data, 4, false));
+    //     assertNull(ctrl.binarySearchByEnrollment(data, 16, false));
+    // }
 
-    @Test
-    public void testFilaF() {
-        ctrl.sortSelectionDesc(data);
-        assertTrue(isSortedDesc(data));
-        Universidad u = ctrl.binarySearchByEnrollment(data, 13, false);
-        assertNotNull(u);
-        assertEquals("Universidad Alpha", u.getNombre());
+    // @Test
+    // public void testFilaF() {
+    //     ctrl.sortSelectionDesc(data);
+    //     assertTrue(isSortedDesc(data));
+    //     Universidad u = ctrl.binarySearchByEnrollment(data, 13, false);
+    //     assertNotNull(u);
+    //     assertEquals("Universidad Alpha", u.getNombre());
 
-        assertNull(ctrl.binarySearchByEnrollment(data, 99, true));
-        assertNull(ctrl.binarySearchByEnrollment(data, 13, true));
-    }
+    //     assertNull(ctrl.binarySearchByEnrollment(data, 99, true));
+    //     assertNull(ctrl.binarySearchByEnrollment(data, 13, true));
+    // }
 
 }

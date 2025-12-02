@@ -5,7 +5,7 @@ public class App {
     public static void main(String[] args) {
 
         final String nombreEstudiante = "Bryan Barros";
-        final String fila = "B";
+        final String fila = "A";
 
         System.out.println("Examen de:");
         System.out.println("Estudiante: " + nombreEstudiante);
@@ -18,12 +18,12 @@ public class App {
         UniversidadController ctrl = new UniversidadController();
 
         // Ordenar (ejemplo Bubble Asc)
-        ctrl.sortBubbleAsc(universidades);
+        ctrl.sortInsertionAsc(universidades);
 
         // Imprimir
-        System.out.println("Universidades ordenadas ascendentemente:");
-        for (Universidad u : universidades) {
-            System.out.println(u);
-        }
+        // System.out.println("Universidades ordenadas ascendentemente:");
+        // for (Universidad u : universidades) {
+        //     System.out.println(u);
+        // }
     }
 }

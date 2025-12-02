@@ -19,8 +19,10 @@ public class Carrera {
         return estudiantes;
     }
 
+    
     @Override
     public String toString() {
-        return "Carrera [nombre=" + nombre + ", estudiantes=" + Arrays.toString(estudiantes) + "]";
+        return nombre + " | Estudiantes: " + estudiantes.length;
     }
+
 }
