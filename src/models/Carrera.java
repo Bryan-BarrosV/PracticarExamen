@@ -1,5 +1,26 @@
 package models;
 
-public class Carrera {
+import java.util.Arrays;
 
+public class Carrera {
+    private String nombre;
+    private Estudiante[] estudiantes;
+
+    public Carrera(String nombre, Estudiante[] estudiantes) {
+        this.nombre = nombre;
+        this.estudiantes = estudiantes;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Estudiante[] getEstudiantes() {
+        return estudiantes;
+    }
+
+    @Override
+    public String toString() {
+        return "Carrera [nombre=" + nombre + ", estudiantes=" + Arrays.toString(estudiantes) + "]";
+    }
 }
